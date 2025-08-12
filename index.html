@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kandahar Electronic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="google .css">
+    <style>
+        /* Custom CSS for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-card {
+            transition: all 0.3s ease;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+               <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3"><img src="ke.img.png" alt=""></div>
+                         <span class="text-blue-600">Kandahar</span> Electronic
+                    </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-blue-600 font-medium transition">Home</a>
+                    <a href="#products" class="text-gray-800 hover:text-blue-600 font-medium transition">Products</a>
+                    <a href="#about" class="text-gray-800 hover:text-blue-600 font-medium transition">About</a>
+                    <a href="#contact" class="text-gray-800 hover:text-blue-600 font-medium transition">Contact</a>
+                </nav>
+                
+                <!-- Cart and Mobile Menu Button -->
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <button id="cartButton" class="text-gray-700 hover:text-blue-600 transition">
+                            <i class="fas fa-shopping-cart text-xl"></i>
+                            <span id="cartCount" class="absolute -top-2 -right-2 bg-blue-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                        </button>
+                    </div>
+                    <button id="mobileMenuButton" class="md:hidden text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-2">
+                <a href="#home" class="block py-2 text-gray-800 hover:text-blue-600 transition">Home</a>
+                <a href="#products" class="block py-2 text-gray-800 hover:text-blue-600 transition">Products</a>
+                <a href="#about" class="block py-2 text-gray-800 hover:text-blue-600 transition">About</a>
+                <a href="#contact" class="block py-2 text-gray-800 hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4"> Kandahar Electronic</h2>
+                <p class="text-xl mb-6"></p>
+                <div class="flex space-x-4">
+                    <a href="#products" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition">Shop Now</a>
+                    <a href="#about" class="border-2 border-white px-6 py-3 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition">Learn More</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 fade-in">
+                <img src="ke.img.png" 
+                     alt="Electronics" 
+                     class="rounded-lg shadow-xl w-full h-auto object-cover">
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Products Section -->
+    <section id="products" class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Featured Products</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                    <div class="relative">
+                        <img src="ap.img.jpg" 
+                             alt="Laptop" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded"></div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Unifi AP AC pro
+                        Ubiquiti AC Pro V2 Wifi In/Outdoor AP 2.4GHZ-450Mbps 5GHZ-1300Mbps 1750Mbps UAP-AC-PRO</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(24 reviews)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$80</span>
+                            <span class="text-gray-500 line-through text-sm">$90</span>
+                        </div>
+                        <button onclick="addToCart('Unifi AP AC Pro', 1299, 'https://www.theodist.com/Images/ProductImages/Medium/UAPACPRO.jpg')" class="w-full mt-4 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                    <div class="relative">
+                        <img src="le.img.jpeg"
+                             alt="Linksys AE 8300" 
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Linksys Mesh Wifi 5 Router, Tri-Band, 2,000 Sq. ft Coverage, Supports Guest WiFi, Parent Control, 20+ Devices, Speeds up to (AC2200) 2.2Gbps - MR8300</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(42 reviews)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$33</span>
+                        </div>
+                        <button onclick="addToCart('Linksys AE 8300', 33, 'https://m.media-amazon.com/images/I/61BEYsbrtlL.__AC_SX300_SY300_QL70_FMwebp_.jpg')" class="w-full mt-4 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                    <div class="relative">
+                        <img src="https://m.media-amazon.com/images/I/41xctuWlxWS._AC_SX569_.jpg" 
+                             alt="Google AC1304 " 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">New</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Google Wifi - AC1200 - Mesh WiFi System - Wifi Router - 1500 Sq Ft Coverage - 1 pack</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(18 reviews)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$25</span>
+                        </div>
+                    
+                        <button onclick="addToCart('Google AC1304 ', 25, 'https://m.media-amazon.com/images/I/715jmtsmLkL._AC_UY327_FMwebp_QL65_.jpg')" class="w-full mt-4 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                    <div class="relative">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YtSM8VfKP7u3Gbi4DBVdylCAD7myfI6g2g&s" 
+                             alt="Headphones" 
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">MikroTik RouterBOARD 4011iGS+RM 10x1000-T, 1xSFP+, RouterOS, RB4011IGS+RM (10x1000-T, 1xSFP+, RouterOS L5, Desktop Case w. Rackmount Kit)</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(56 reviews)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$140</span>
+                            <span class="text-gray-500 line-through text-sm">$140</span>
+                        </div>
+                        <button onclick="addToCart('Sony WH-1000XM4', 140, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YtSM8VfKP7u3Gbi4DBVdylCAD7myfI6g2g&s')" class="w-full mt-4 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+             <!-- Product 5 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                    <div class="relative">
+                        <img src="https://m.media-amazon.com/images/I/612UI4E26oL._AC_UY327_FMwebp_QL65_.jpg" 
+                             alt="MikroTik -CRS326-24G-2s+RM " 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">New</div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Mikrotik CRS326-24G-2S+RM 24 Port Gigabit Ethernet Switch with 2 SFP+ Ports, Dual Boot RouterOS/SwOS, Managed, Metal Case, Compatible with Desktop/Laptop/Printer</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(18 reviews)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$180</span>
+                        </div>
+                    
+                        <button onclick="addToCart('CRS326-24G-2S', 180, 'https://m.media-amazon.com/images/I/612UI4E26oL._AC_UY327_FMwebp_QL65_.jpg')" class="w-full mt-4 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition">
+                    View All Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+ <!-- Product 6 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md fade-in">
+                    <div class="relative">
+                        <img src="https://cdn.mikrotik.com/web-assets/rb_images/1504_hi_res.png" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded"></div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-semibold text-lg mb-1">Mikrotik RB2011UiAS-2HnD-IN Wireless Router</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 text-sm ml-2">(18 reviews)</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$90</span>
+                        </div>
+                    
+                        <button onclick="addToCart('Mikrotik RB2011UiAS-2HnD-IN', 90, 'https://m.media-amazon.com/images/I/51Z0GGW83qL._AC_SX679_.jpg')" class="w-full mt-4 bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-600 hover:text-white transition">
+                    View All Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8 fade-in">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">About Kandahar Electronic</h2>
+                    <p class="text-gray-600 mb-4">
+                        Kandahar Electronics, founded in 2014, is a leading electronics retailer in the region. We pride ourselves on offering the latest technology at competitive prices and exceptional customer service.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <div class="bg-blue-100 p-4 rounded-lg">
+                            <i class="fas fa-shield-alt text-blue-600 text-2xl mb-2"></i>
+                            <h3 class="font-semibold"></h3>
+                        </div>
+                        <div class="bg-blue-100 p-4 rounded-lg">
+                            <i class="fas fa-truck text-blue-600 text-2xl mb-2"></i>
+                            <h3 class="font-semibold"></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 fade-in">
+                    <img src="https://blogassets.airtel.in/wp-content/uploads/2024/04/windows-7-article-image-1.jpg" 
+                         alt="Our Store" 
+                         class="rounded-lg shadow-lg w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">What Our Customers Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md fade-in">
+                    <div class="flex items-center mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG9IEKkbKQ2tEHnHPiXNbsz4PQJtZT5yDMAg&s" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold"></h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md fade-in">
+                    <div class="flex items-center mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUgooUYaElIjGYMJprr_4GS5R53nUviR-CdQ&s" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold"></h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md fade-in">
+                    <div class="flex items-center mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9FmtGE-xOPQumNh42jXvLXNhnsZmdnAVYTg&s" 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-semibold"></h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
+                <div class="bg-gray-50 rounded-lg shadow-md overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 bg-blue-600 text-white p-8">
+                            <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
+                            <p class="mb-6">
+                            <h1>زموږ د محصولاتو یا خدماتو په اړه پوښتنې لرئ؟ زموږ  سره اړیکه ونیسئ.</h1>
+                            </p>
+                            آیا در مورد محصولات یا خدمات ما سوالی دارید؟ با ما تماس بگیرید.
+                            </p>
+                            
+                            Do you have questions about our products or services? Contact us.
+                            </p>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Address</h4>
+                                        <p>کابل شهر نو چهارراهی حاجی یعقوب مقابل لایت سنتر عنایت مارکیت</p>
+                                        <p>
+                                        Kabul Shahr New Crossroads Haji Yaqoob Opposite Light Center Inayat Market
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-phone-alt mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Phone/whatsapp</h4>
+                                        <p>+93 708927241</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <i class="fas fa-envelope mt-1 mr-4"></i>
+                                    <div>
+                                        <h4 class="font-semibold">Email</h4>
+                                        <p>info.kandaharelectronic@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <h4 class="font-semibold mb-4">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-white hover:text-blue-200 transition"><i class="fab fa-facebook-f text-xl"></i></a>
+                                    <a href="#" class="text-white hover:text-blue-200 transition"><i class="fab fa-twitter text-xl"></i></a>
+                                    <a href="#" class="text-white hover:text-blue-200 transition"><i class="fab fa-instagram text-xl"></i></a>
+                                    <a href="#" class="text-white hover:text-blue-200 transition"><i class="fab fa-linkedin-in text-xl"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 p-8">
+                            <form id="contactForm" class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-gray-700 mb-1">Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 mb-1">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                                </div>
+                                <div>
+                                    <label for="subject" class="block text-gray-700 mb-1">Subject</label>
+                                    <input type="text" id="subject" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-gray-700 mb-1">Message</label>
+                                    <textarea id="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition">
+                                    Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-12 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+            <p class="max-w-2xl mx-auto mb-8">Stay updated with our latest products, promotions, and tech news.</p>
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none text-gray-800">
+                <button type="submit" class="bg-blue-800 px-6 py-3 rounded-r-lg font-medium hover:bg-blue-900 transition">
+                    Subscribe
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                      <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3"><img src="ke.img.png" alt=""></div>
+                         <span class="text-blue-600">Kandahar</span> Electronic
+                    </div>
+                    <p>په کندهار الکترونیکي کې د کیفیت لپاره ستاسو باوري سرچینه. موږ تاسو ته وروستۍ ټیکنالوژي د استثنایی خدماتو سره راوړو.</p>
+                    <p class="text-gray-400">
+                      Your trusted source for quality in Kandahar Electronic. We bring you the latest technology with exceptional service.
+                    </p>
+                    <p>منبع قابل اعتماد شما برای کیفیت درکندهار الکترونیک. ما جدیدترین فناوری را با خدمات استثنایی به شما ارائه می‌دهیم..</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-white transition">Products</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-lg font-semibold mb-2">Store Hours</h4>
+                        <p class="text-gray-400">open: 8AM - are clause: 8PM</p>
+                        <p class="text-gray-400"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Kandahar Electronic. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+        <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            </div>
+            
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                    <div class="flex justify-between items-center border-b pb-4 mb-4">
+                        <h3 class="text-lg font-medium text-gray-900">Your Shopping Cart</h3>
+                        <button id="closeCart" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div id="cartItems" class="max-h-96 overflow-y-auto">
+                        <!-- Cart items will be added here dynamically -->
+                        <p class="text-gray-500 text-center py-8">Your cart is empty</p>
+                    </div>
+                    <div id="cartTotal" class="border-t pt-4 mt-4 hidden">
+                        <div class="flex justify-between font-semibold text-lg">
+                            <span>Total:</span>
+                            <span>$<span id="totalAmount">0.00</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <button id="checkoutButton" type="button" class="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:ml-3 sm:w-auto sm:text-sm hidden">
+                        Checkout
+                    </button>
+                    <button id="continueShopping" type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">
+                        Continue Shopping
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Notification -->
+    <div id="successNotification" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden flex items-center">
+        <i class="fas fa-check-circle mr-2"></i>
+        <span>Item added to cart!</span>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Shopping cart functionality
+        let cart = [];
+        
+        // Cart modal controls
+        const cartButton = document.getElementById('cartButton');
+        const cartModal = document.getElementById('cartModal');
+        const closeCart = document.getElementById('closeCart');
+        const continueShopping = document.getElementById('continueShopping');
+        
+        cartButton.addEventListener('click', () => {
+            cartModal.classList.remove('hidden');
+            updateCartDisplay();
+        });
+        
+        closeCart.addEventListener('click', () => {
+            cartModal.classList.add('hidden');
+        });
+        
+        continueShopping.addEventListener('click', () => {
+            cartModal.classList.add('hidden');
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === cartModal) {
+                cartModal.classList.add('hidden');
+            }
+        });
+        
+        // Add to cart function
+        function addToCart(name, price, image) {
+            // Check if item already exists in cart
+            const existingItem = cart.find(item => item.name === name);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name,
+                    price,
+                    image,
+                    quantity: 1
+                });
+            }
+            
+            // Update cart count
+            updateCartCount();
+            
+            // Show success notification
+            const notification = document.getElementById('successNotification');
+            notification.classList.remove('hidden');
+            
+            setTimeout(() => {
+                notification.classList.add('hidden');
+            }, 3000);
+        }
+        
+        // Update cart count in header
+        function updateCartCount() {
+            const count = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cartCount').textContent = count;
+        }
+        
+        // Update cart display in modal
+        function updateCartDisplay() {
+            const cartItemsContainer = document.getElementById('cartItems');
+            const cartTotalContainer = document.getElementById('cartTotal');
+            const checkoutButton = document.getElementById('checkoutButton');
+            
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="text-gray-500 text-center py-8">Your cart is empty</p>';
+                cartTotalContainer.classList.add('hidden');
+                checkoutButton.classList.add('hidden');
+                return;
+            }
+            
+            cartItemsContainer.innerHTML = '';
+            
+            let total = 0;
+            
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                const itemElement = document.createElement('div');
+                itemElement.className = 'flex items-center py-4 border-b';
+                itemElement.innerHTML = `
+                    <div class="flex-shrink-0">
+                        <img src="${item.image}" alt="  ${item.name}" class="w-16 h-16 object-cover rounded">
+                    </div>
+                    <div class="ml-4 flex-grow">
+                        <h4 class="font-medium">${item.name}</h4>
+                        <p class="text-gray-600">$${item.price.toFixed(2)}</p>
+                    </div>
+                    <div class="flex items-center">
+                        <button onclick="updateQuantity(${index}, -1)" class="text-gray-500 hover:text-blue-600 px-2">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <span class="mx-2">${item.quantity}</span>
+                        <button onclick="updateQuantity(${index}, 1)" class="text-gray-500 hover:text-blue-600 px-2">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        <button onclick="removeFromCart(${index})" class="ml-4 text-red-500 hover:text-red-700">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+                
+                cartItemsContainer.appendChild(itemElement);
+            });
+            
+            document.getElementById('totalAmount').textContent = total.toFixed(2);
+            cartTotalContainer.classList.remove('hidden');
+            checkoutButton.classList.remove('hidden');
+        }
+        
+        // Update item quantity
+        function updateQuantity(index, change) {
+            cart[index].quantity += change;
+            
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+            
+            updateCartCount();
+            updateCartDisplay();
+        }
+        
+        // Remove item from cart
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartCount();
+            updateCartDisplay();
+        }
+        
+        // Checkout button
+        document.getElementById('checkoutButton').addEventListener('click', () => {
+            alert('Thank you for your purchase! Your order total is $' + 
+                  cart.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2));
+            cart = [];
+            updateCartCount();
+            updateCartDisplay();
+            cartModal.classList.add('hidden');
+        });
+        
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            e.target.reset();
+        });
+        
+        // Fade in animations on scroll
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            fadeInObserver.observe(element);
+        });
+    </script>
+</body>
+</html>
