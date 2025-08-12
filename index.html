@@ -681,7 +681,7 @@
                     </div>
                     <div class="ml-4 flex-grow">
                         <h4 class="font-medium">${item.name}</h4>
-                        <p class="text-gray-600">$${item.price.toFixed(2)}</p>
+                        <p class="text-gray-600">${item.price.toFixed(2)}؋</p>
                     </div>
                     <div class="flex items-center">
                         <button onclick="updateQuantity(${index}, -1)" class="text-gray-500 hover:text-blue-600 px-2">
@@ -726,7 +726,7 @@
         
         // Checkout button
         document.getElementById('checkoutButton').addEventListener('click', () => {
-            alert('Thank you for your purchase! Your order total is $' + 
+            alert('Thank you for your purchase! Your order total is ؋' + 
                   cart.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2));
             cart = [];
             updateCartCount();
@@ -761,7 +761,6 @@
     </script>
 </body>
 </html>
-
 
 
 
